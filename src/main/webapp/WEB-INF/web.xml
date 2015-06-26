@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>idp4java</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description></description>
+    <display-name>SSOServlet</display-name>
+    <servlet-name>SSOServlet</servlet-name>
+    <servlet-class>com.csb.sample.sso.openid.web</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SSOServlet</servlet-name>
+    <url-pattern>/sso</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>ConsumerReturnServlet</display-name>
+    <servlet-name>ConsumerReturnServlet</servlet-name>
+    <servlet-class>com.csb.sample.sso.openid.web</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConsumerReturnServlet</servlet-name>
+    <url-pattern>/return</url-pattern>
+  </servlet-mapping>
+</web-app>
